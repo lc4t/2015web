@@ -1,5 +1,5 @@
 <?php
-    if(preg_match_all("/index\.php/i",$_SERVER['HTTP_REFERER']) == 0)
+    if(preg_match_all("/where_i5_flag\.php/i",$_SERVER['HTTP_REFERER']) == 0)
     {
         print "back!";
         exit();

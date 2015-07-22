@@ -1,7 +1,7 @@
 <?php
         header("Content-type: text/html; charset=utf-8");
-        if ($_SERVER['HTTP_X_FORWARDED_FOR'] == "127.0.0.0" &&
-            getenv('HTTP_CLIENT_IP') == "127.0.0.0"
+        if ($_SERVER['HTTP_X_FORWARDED_FOR'] == "127.0.0.1" &&
+            getenv('HTTP_CLIENT_IP') == "127.0.0.1"
             )
         {
 
