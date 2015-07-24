@@ -9,3 +9,7 @@
     {
         echo '<a href="flag_is_here.php">flag is here</a>';
     }
+    else
+    {
+        echo 'Only admin can visit';
+    }
