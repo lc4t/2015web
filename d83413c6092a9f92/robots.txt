@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /protected/#QFOHFQIL380HIE2903.txt
+

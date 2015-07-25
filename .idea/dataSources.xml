@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DataSourceManagerImpl" format="xml" hash="2336623324">
-    <data-source source="LOCAL" name="MySQL - @localhost" uuid="3791d7f7-c652-4065-89e1-623a0063e753">
+  <component name="DataSourceManagerImpl" format="xml" hash="1529501898">
+    <data-source source="LOCAL" name="MySQL - @localhost" uuid="1fc0208d-5867-4533-bf9b-5ac219b54376">
       <driver-ref>mysql</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.jdbc.Driver</jdbc-driver>
@@ -13,11 +13,7 @@
         <property name="characterSetResults" value="utf8" />
         <property name="yearIsDateType" value="false" />
       </driver-properties>
-      <libraries>
-        <library>
-          <url>file://$APPLICATION_CONFIG_DIR$/jdbc-drivers/mysql-connector-java-5.1.35-bin.jar</url>
-        </library>
-      </libraries>
+      <libraries />
     </data-source>
   </component>
 </project>
