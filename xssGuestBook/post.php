@@ -16,7 +16,7 @@ DB::close();
 
 if($insert_status) {
 //	redirect to the index page
-	header('location:index.php');
+	header('location:message.php');
 } else{
 	echo '抱歉，留言失败！';
 	echo '<a href='.'index.php>'.'首页</a>';	

