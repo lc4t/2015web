@@ -28,11 +28,12 @@ while($temp = mysql_fetch_array($sql_page_result))
     $sql_page_array[] = $temp;
 }
 DB::close();
-
+echo '<html><head>';
+echo '<meta http-equiv="content-type" content="text/html;charset=utf-8">';
 echo '<script src="js/jquery.min.js"></script>';
 echo '<link href="css/bootstrap.min.css" rel="stylesheet">';
 echo '<script src="js/bootstrap.js"></script>';
-
+echo '</head>';
 //循环输出数据库中满足条件id留言内容
 if (!empty($sql_page_array))
 {
@@ -55,16 +56,49 @@ if (!empty($sql_page_array))
 }
 
 
+
+
+
+
 echo '共 '.$gb_count.'&nbsp;&nbsp;条留言  ';
-if ($pagenum > 1) {
-    for($i = 1; $i <= $pagenum; $i++) {
-        if($i == $page) {
-            echo '&nbsp;&nbsp;['.$i.']';
-        } else {
-            echo '<a href="?page='. $i .'">&nbsp;' . $i . '&nbsp;</a>';
-        }
+echo '<nav>';
+echo '  <ul class="pagination">';
+//echo '    <li>';
+//echo '      <a href="#" aria-label="Previous">';
+//echo '        <span aria-hidden="true">&laquo;</span>';
+//echo '      </a>';
+//echo '    </li>';
+
+
+if ($pagenum > 1) 
+{   
+    for($i = 1; $i <= $pagenum; $i++)
+    {
+        echo '<li>';
+        echo '<a href="?page=' .$i .'">' . $i;
+        echo '</a>';
+        echo '</li>';
     }
 }
+
+//if ($pagenum > 1) 
+//{
+//    for($i = 1; $i <= $pagenum; $i++) {
+//        if($i == $page) {
+//            echo '&nbsp;&nbsp;['.$i.']';
+//        } else {
+//            echo '<li><a href="#">' .$i .'</a></li>';
+//        }
+//    }
+//}
+
+//echo '    <li>';
+//echo '      <a href="#" aria-label="Next">';
+//echo '        <span aria-hidden="true">&raquo;</span>';
+//echo '      </a>';
+//echo '    </li>';
+echo '  </ul>';
+echo '</nav>';
 
 require 'common/footer.php';
 
