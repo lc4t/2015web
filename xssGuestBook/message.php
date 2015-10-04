@@ -1,4 +1,5 @@
 <?php
+$title = '留言本';
 require 'config.php';
 require './common/header.php';
 require 'mysql.class.php';
@@ -44,7 +45,7 @@ if (!empty($sql_page_array))
         echo '<div class="panel-heading">';
         echo '留言者：' . $value['nickname'] . ' ';
 
-        echo '时间：' . date('Y-m-d H:i:s', $value['createtime']);
+        // echo '时间：' . date('Y-m-d H:i:s', $value['createtime']);
         echo '</div>';
         echo '<div class="panel-body">';
         echo $value['content'];

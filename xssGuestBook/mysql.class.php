@@ -38,6 +38,8 @@ class DB {
         $sql = preg_replace('/%/si','.',$sql);
         $sql = preg_replace('/\'/si','.',$sql);
         $sql = preg_replace('/src/si','.',$sql);
+        $sql = preg_replace('/\[\]/si','.',$sql);
+        $sql = preg_replace('/_/si','.',$sql);
 
 		return $sql;
 	}

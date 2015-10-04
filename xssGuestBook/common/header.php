@@ -4,7 +4,7 @@
 <!--<link href="css/layout.css" rel="stylesheet" type="text/css" />-->
 <title>
 <?php
-echo $title; 
+echo $title;
 ?>
 </title>
 </head>

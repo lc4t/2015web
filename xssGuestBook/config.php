@@ -1,9 +1,8 @@
 <?php
-error_reporting(E_ALL);
+
 error_reporting(0);
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
-error_reporting(E_ALL^E_NOTICE^E_WARNING);
-define('DEBUG', 'ture');
+error_reporting(E_ALL^E_NOTICE);
+define('DEBUG', 'false');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'xss');
 define('DB_PWD', 'xss@lc4t');

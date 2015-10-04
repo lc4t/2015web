@@ -1,11 +1,8 @@
 <?php
-/**
-* set title 
-*/
-//is admin login?
+
 session_start();
-if (!$_SESSION['admin']) {
-	header('location:index.html');
+if (@!$_SESSION['admin']) {
+	header('location:_index.html');
 }
 
 setcookie('flag','CNSS{what_do_you_think_of_xss}');
@@ -38,14 +35,7 @@ while($temp = mysql_fetch_array($sql_page_result)) {
 }
 DB::close();
 
-//echo '
-//<form method="POST" action="delete.php">
-//	Who are you: <input type = text name=id><br>
-//
-//                 <input type = submit name = btn value=Send>
-//</form>';
 
-//循环输出数据库中满足条件id留言内容
 if (!empty($sql_page_array))
 {
     foreach($sql_page_array as $key => $value) {
@@ -55,14 +45,9 @@ if (!empty($sql_page_array))
         echo '留言者：'. $value['nickname'].'|';
         echo 'E-MAIL:' . $value['email'] . '<br />';
         echo '内容:' . $value['content'] . '<br />';
-        //将时间转换成指定格式时间
-        echo '时间：' . date('Y-m-d H:i:s', $value['createtime']) .'<br />';
-//        if (!empty($value['reply'])) {
-//            echo '管理员回复：' . $value['reply'] . '|';
-//            echo '回复时间：' . date('Y-m-d H:i:s', $value['replytime']) .'<br />';
-//        } else {
-//            echo '<input type="button" name="reply" value="reply"/>';
-//        }
+
+        // echo '时间：' . date('Y-m-d H:i:s', $value['createtime']) .'<br />';
+
         echo '<input type="submit" name="delete" value="delete"/></div>';
         echo '</form><hr />';
     }

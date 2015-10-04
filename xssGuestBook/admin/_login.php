@@ -19,9 +19,9 @@ if ($user === "ddmin" && md5($pwd) === $password) {
 	//save to session
 	session_start();
 	$_SESSION['admin'] = true;
-	header('location:admin.php');
+	header('location:_admin.php');
 } else {
-	header('location:index.html');
+	header('location:_index.html');
 }
 
 /**end of file**/

